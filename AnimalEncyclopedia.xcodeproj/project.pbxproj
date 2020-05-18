@@ -3,27 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DB18B7CF2462956400138FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18B7CE2462956400138FAE /* AppDelegate.swift */; };
-		DB18B7D12462956400138FAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18B7D02462956400138FAE /* SceneDelegate.swift */; };
 		DB18B7D32462956400138FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18B7D22462956400138FAE /* ViewController.swift */; };
 		DB18B7D62462956400138FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB18B7D42462956400138FAE /* Main.storyboard */; };
 		DB18B7D82462956600138FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB18B7D72462956600138FAE /* Assets.xcassets */; };
 		DB18B7DB2462956600138FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB18B7D92462956600138FAE /* LaunchScreen.storyboard */; };
+		DB18B7E32462972100138FAE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18B7E22462972100138FAE /* Extensions.swift */; };
+		DB18B7E52462995D00138FAE /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB18B7E42462995D00138FAE /* FilterView.xib */; };
+		DB18B7E72462997900138FAE /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18B7E62462997900138FAE /* FilterView.swift */; };
+		DB237685246D3A4B001887D7 /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB237684246D3A4B001887D7 /* CustomPickerView.swift */; };
+		DB237687247237D8001887D7 /* DIYFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB237686247237D8001887D7 /* DIYFile.swift */; };
+		DB23768924727254001887D7 /* DIYVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB23768824727254001887D7 /* DIYVC.swift */; };
+		DB23768B2472760E001887D7 /* DIYCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB23768A2472760E001887D7 /* DIYCell.swift */; };
+		DB23768E24727DC7001887D7 /* DIYDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB23768C24727DC7001887D7 /* DIYDetailedVC.swift */; };
+		DB845C552463EC850060C02E /* AnimalModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB845C542463EC850060C02E /* AnimalModelCell.swift */; };
+		DB845C59246407720060C02E /* AnimalFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB845C58246407720060C02E /* AnimalFile.swift */; };
+		E7465D8B7DF16DF5A9BD1A0C /* Pods_AnimalEncyclopedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674527752D2995F01136DDAB /* Pods_AnimalEncyclopedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DB18B7CB2462956400138FAE /* AnimalEncyclopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalEncyclopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47C4CF9F76DFF3A58F728F15 /* Pods-AnimalEncyclopedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalEncyclopedia.release.xcconfig"; path = "Target Support Files/Pods-AnimalEncyclopedia/Pods-AnimalEncyclopedia.release.xcconfig"; sourceTree = "<group>"; };
+		647C267D9DD44A74E6134E61 /* Pods-AnimalEncyclopedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalEncyclopedia.debug.xcconfig"; path = "Target Support Files/Pods-AnimalEncyclopedia/Pods-AnimalEncyclopedia.debug.xcconfig"; sourceTree = "<group>"; };
+		674527752D2995F01136DDAB /* Pods_AnimalEncyclopedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalEncyclopedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB18B7CB2462956400138FAE /* 動物大百科.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "動物大百科.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB18B7CE2462956400138FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB18B7D02462956400138FAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DB18B7D22462956400138FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB18B7D52462956400138FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB18B7D72462956600138FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB18B7DA2462956600138FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB18B7DC2462956600138FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB18B7E22462972100138FAE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DB18B7E42462995D00138FAE /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
+		DB18B7E62462997900138FAE /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		DB237684246D3A4B001887D7 /* CustomPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
+		DB237686247237D8001887D7 /* DIYFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYFile.swift; sourceTree = "<group>"; };
+		DB23768824727254001887D7 /* DIYVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYVC.swift; sourceTree = "<group>"; };
+		DB23768A2472760E001887D7 /* DIYCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYCell.swift; sourceTree = "<group>"; };
+		DB23768C24727DC7001887D7 /* DIYDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYDetailedVC.swift; sourceTree = "<group>"; };
+		DB845C542463EC850060C02E /* AnimalModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModelCell.swift; sourceTree = "<group>"; };
+		DB845C58246407720060C02E /* AnimalFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,24 +53,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7465D8B7DF16DF5A9BD1A0C /* Pods_AnimalEncyclopedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2158DC64096D6F6FF8578B7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				647C267D9DD44A74E6134E61 /* Pods-AnimalEncyclopedia.debug.xcconfig */,
+				47C4CF9F76DFF3A58F728F15 /* Pods-AnimalEncyclopedia.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		94C56654C5316C110EC7EAB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				674527752D2995F01136DDAB /* Pods_AnimalEncyclopedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB18B7C22462956400138FAE = {
 			isa = PBXGroup;
 			children = (
 				DB18B7CD2462956400138FAE /* AnimalEncyclopedia */,
 				DB18B7CC2462956400138FAE /* Products */,
+				2158DC64096D6F6FF8578B7A /* Pods */,
+				94C56654C5316C110EC7EAB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		DB18B7CC2462956400138FAE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB18B7CB2462956400138FAE /* AnimalEncyclopedia.app */,
+				DB18B7CB2462956400138FAE /* 動物大百科.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,14 +99,31 @@
 			isa = PBXGroup;
 			children = (
 				DB18B7CE2462956400138FAE /* AppDelegate.swift */,
-				DB18B7D02462956400138FAE /* SceneDelegate.swift */,
 				DB18B7D22462956400138FAE /* ViewController.swift */,
+				DB845C542463EC850060C02E /* AnimalModelCell.swift */,
+				DB23768824727254001887D7 /* DIYVC.swift */,
+				DB23768A2472760E001887D7 /* DIYCell.swift */,
+				DB23768C24727DC7001887D7 /* DIYDetailedVC.swift */,
+				DB5224DC2462C3DD00B396B7 /* Filter */,
 				DB18B7D42462956400138FAE /* Main.storyboard */,
+				DB18B7E22462972100138FAE /* Extensions.swift */,
+				DB237684246D3A4B001887D7 /* CustomPickerView.swift */,
+				DB845C58246407720060C02E /* AnimalFile.swift */,
+				DB237686247237D8001887D7 /* DIYFile.swift */,
 				DB18B7D72462956600138FAE /* Assets.xcassets */,
 				DB18B7D92462956600138FAE /* LaunchScreen.storyboard */,
 				DB18B7DC2462956600138FAE /* Info.plist */,
 			);
 			path = AnimalEncyclopedia;
+			sourceTree = "<group>";
+		};
+		DB5224DC2462C3DD00B396B7 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				DB18B7E62462997900138FAE /* FilterView.swift */,
+				DB18B7E42462995D00138FAE /* FilterView.xib */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB18B7DF2462956600138FAE /* Build configuration list for PBXNativeTarget "AnimalEncyclopedia" */;
 			buildPhases = (
+				4471D03BB97CAE51A28D42F2 /* [CP] Check Pods Manifest.lock */,
 				DB18B7C72462956400138FAE /* Sources */,
 				DB18B7C82462956400138FAE /* Frameworks */,
 				DB18B7C92462956400138FAE /* Resources */,
+				5053B5D8E382B503F65033E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -84,7 +145,7 @@
 			);
 			name = AnimalEncyclopedia;
 			productName = AnimalEncyclopedia;
-			productReference = DB18B7CB2462956400138FAE /* AnimalEncyclopedia.app */;
+			productReference = DB18B7CB2462956400138FAE /* 動物大百科.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB18B7E52462995D00138FAE /* FilterView.xib in Resources */,
 				DB18B7DB2462956600138FAE /* LaunchScreen.storyboard in Resources */,
 				DB18B7D82462956600138FAE /* Assets.xcassets in Resources */,
 				DB18B7D62462956400138FAE /* Main.storyboard in Resources */,
@@ -133,14 +195,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4471D03BB97CAE51A28D42F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimalEncyclopedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5053B5D8E382B503F65033E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimalEncyclopedia/Pods-AnimalEncyclopedia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimalEncyclopedia/Pods-AnimalEncyclopedia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimalEncyclopedia/Pods-AnimalEncyclopedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB18B7C72462956400138FAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB18B7E72462997900138FAE /* FilterView.swift in Sources */,
+				DB845C59246407720060C02E /* AnimalFile.swift in Sources */,
 				DB18B7D32462956400138FAE /* ViewController.swift in Sources */,
+				DB23768924727254001887D7 /* DIYVC.swift in Sources */,
+				DB237685246D3A4B001887D7 /* CustomPickerView.swift in Sources */,
+				DB18B7E32462972100138FAE /* Extensions.swift in Sources */,
+				DB23768B2472760E001887D7 /* DIYCell.swift in Sources */,
 				DB18B7CF2462956400138FAE /* AppDelegate.swift in Sources */,
-				DB18B7D12462956400138FAE /* SceneDelegate.swift in Sources */,
+				DB237687247237D8001887D7 /* DIYFile.swift in Sources */,
+				DB845C552463EC850060C02E /* AnimalModelCell.swift in Sources */,
+				DB23768E24727DC7001887D7 /* DIYDetailedVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,16 +394,22 @@
 		};
 		DB18B7E02462956600138FAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 647C267D9DD44A74E6134E61 /* Pods-AnimalEncyclopedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 38AMPUQ98F;
 				INFOPLIST_FILE = AnimalEncyclopedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uuu.com.AnimalEncyclopedia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = uuu.HelloM.AnimalEncyclopedia;
+				PRODUCT_NAME = "動物大百科";
+				PROVISIONING_PROFILE_SPECIFIER = Profile_AE_20200515;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,16 +417,22 @@
 		};
 		DB18B7E12462956600138FAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47C4CF9F76DFF3A58F728F15 /* Pods-AnimalEncyclopedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 38AMPUQ98F;
 				INFOPLIST_FILE = AnimalEncyclopedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uuu.com.AnimalEncyclopedia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = uuu.HelloM.AnimalEncyclopedia;
+				PRODUCT_NAME = "動物大百科";
+				PROVISIONING_PROFILE_SPECIFIER = Profile_AE_20200515;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
