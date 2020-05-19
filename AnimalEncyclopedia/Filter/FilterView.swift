@@ -30,11 +30,10 @@ class FilterView: UIView {
     var genderSelect = 0
     var personalitySelect = 0
     var animalSelect = 0
-    var monthSelect = 0
+    
     @IBOutlet weak var genderBtn: UIButton!
     @IBOutlet weak var personalityBtn: UIButton!
     @IBOutlet weak var animalBtn: UIButton!
-    @IBOutlet weak var monthBtn: UIButton!
     
     var onSuccess: ((Dictionary<String, Any>) -> ())!
     
@@ -45,12 +44,10 @@ class FilterView: UIView {
         genderSelect = data[0]
         personalitySelect = data[1]
         animalSelect = data[2]
-        monthSelect = data[3]
         
         genderBtn.setTitle("\(genderAry[genderSelect]) ▼", for: .normal)
         personalityBtn.setTitle("\(personalityAry[personalitySelect]) ▼", for: .normal)
         animalBtn.setTitle("\(animalAry[animalSelect]) ▼", for: .normal)
-        monthBtn.setTitle("\(monthAry[monthSelect]) ▼", for: .normal)
     }
     
     required init?(coder: NSCoder) {
@@ -81,21 +78,12 @@ class FilterView: UIView {
         customPickerView.lastSelect = animalSelect
     }
     
-    @IBAction func birthdayClick(_ sender: UIButton) {
-        let customPickerView = CustomPickerView(monthAry) { (select) in
-            sender.setTitle("\(self.monthAry[select as! Int]) ▼", for: .normal)
-            self.monthSelect = select as! Int
-        }
-        customPickerView.lastSelect = monthSelect
-    }
-    
     @IBAction func determineClick(_ sender: UIButton) {
         
         let data = ["gender":genderAry[genderSelect],
                     "personality":personalityAry[personalitySelect],
-                    "animal":animalAry[animalSelect],
-                    "month":monthAry[monthSelect]]
-        animalFilter = [genderSelect, personalitySelect, animalSelect, monthSelect]
+                    "animal":animalAry[animalSelect]]
+        animalFilter = [genderSelect, personalitySelect, animalSelect]
         onSuccess(data)
         
         UIView.animate(withDuration: 0.3, animations: {

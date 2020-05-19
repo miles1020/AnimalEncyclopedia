@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0CF8632473ACBE00F464CE /* MuseumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CF8622473ACBE00F464CE /* MuseumVC.swift */; };
 		DB18B7CF2462956400138FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18B7CE2462956400138FAE /* AppDelegate.swift */; };
 		DB18B7D32462956400138FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18B7D22462956400138FAE /* ViewController.swift */; };
 		DB18B7D62462956400138FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB18B7D42462956400138FAE /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		47C4CF9F76DFF3A58F728F15 /* Pods-AnimalEncyclopedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalEncyclopedia.release.xcconfig"; path = "Target Support Files/Pods-AnimalEncyclopedia/Pods-AnimalEncyclopedia.release.xcconfig"; sourceTree = "<group>"; };
 		647C267D9DD44A74E6134E61 /* Pods-AnimalEncyclopedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalEncyclopedia.debug.xcconfig"; path = "Target Support Files/Pods-AnimalEncyclopedia/Pods-AnimalEncyclopedia.debug.xcconfig"; sourceTree = "<group>"; };
 		674527752D2995F01136DDAB /* Pods_AnimalEncyclopedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalEncyclopedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0CF8622473ACBE00F464CE /* MuseumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumVC.swift; sourceTree = "<group>"; };
 		DB18B7CB2462956400138FAE /* 動物大百科.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "動物大百科.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB18B7CE2462956400138FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB18B7D22462956400138FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				DB23768824727254001887D7 /* DIYVC.swift */,
 				DB23768A2472760E001887D7 /* DIYCell.swift */,
 				DB23768C24727DC7001887D7 /* DIYDetailedVC.swift */,
+				DB0CF8622473ACBE00F464CE /* MuseumVC.swift */,
 				DB5224DC2462C3DD00B396B7 /* Filter */,
 				DB18B7D42462956400138FAE /* Main.storyboard */,
 				DB18B7E22462972100138FAE /* Extensions.swift */,
@@ -252,6 +255,7 @@
 				DB18B7CF2462956400138FAE /* AppDelegate.swift in Sources */,
 				DB237687247237D8001887D7 /* DIYFile.swift in Sources */,
 				DB845C552463EC850060C02E /* AnimalModelCell.swift in Sources */,
+				DB0CF8632473ACBE00F464CE /* MuseumVC.swift in Sources */,
 				DB23768E24727DC7001887D7 /* DIYDetailedVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

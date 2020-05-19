@@ -8,5 +8,6 @@ target 'AnimalEncyclopedia' do
   # Pods for AnimalEncyclopedia
 
 pod 'SDWebImage', '~> 5.0'
+pod 'Segmentio'
 
 end
