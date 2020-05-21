@@ -16,15 +16,20 @@ class ViewController: UIViewController {
     var animalAry: Array<Array<String>> = [[]]
     var isSearch = false
     var isFilter = false
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchType1: UILabel!
     @IBOutlet weak var searchType2: UILabel!
     @IBOutlet weak var searchType3: UILabel!
-    @IBOutlet weak var searchType4: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.placeholder = "搜尋..."
+        searchController.searchBar.tintColor = .black
+        searchController.searchBar.delegate = self
+        searchController.searchBar.returnKeyType = .done
+        navigationItem.searchController = searchController
         
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
@@ -62,7 +67,6 @@ class ViewController: UIViewController {
                 let gender = dic["gender"] as! String
                 let personality = dic["personality"] as! String
                 let animal = dic["animal"] as! String
-                let month = dic["month"] as! String
                 
                 if gender != "全部" {
                     self.searchType1.text = gender
@@ -82,14 +86,8 @@ class ViewController: UIViewController {
                 } else {
                     self.searchType3.isHidden = true
                 }
-                if month != "全部" {
-                    self.searchType4.text = month
-                    self.searchType4.isHidden = false
-                } else {
-                    self.searchType4.isHidden = true
-                }
                 
-                if gender == "全部" && personality == "全部" && animal == "全部" && month == "全部" {
+                if gender == "全部" && personality == "全部" && animal == "全部" {
                     
                     self.isFilter = false
                     if self.isSearch {
@@ -141,18 +139,7 @@ class ViewController: UIViewController {
                     animalList = personalityList
                 }
                 
-                var monthList: Array<Array<String>> = []
-                if month != "全部" {
-                    for item in animalList {
-                        if item[4].contains(month) {
-                            monthList.append(item)
-                        }
-                    }
-                } else {
-                    monthList = animalList
-                }
-                
-                self.resultList = monthList
+                self.resultList = animalList
                 
                 self.animalAry = self.resultList
                 self.collectionView.reloadData()
@@ -166,10 +153,8 @@ class ViewController: UIViewController {
         searchType1.isHidden = true
         searchType2.isHidden = true
         searchType3.isHidden = true
-        searchType4.isHidden = true
         isFilter = false
         isSearch = false
-        searchBar.text = ""
         animalAry = animalModel
         collectionView.reloadData()
     }
@@ -206,9 +191,15 @@ extension ViewController: UISearchBarDelegate {
         collectionView.reloadData()
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-
-        view.endEditing(true)
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        if isFilter {
+            animalAry = resultList
+        } else {
+            animalAry = animalModel
+        }
+        collectionView.reloadData()
+        isSearch = false
     }
 }
 

@@ -2,17 +2,21 @@ PODS:
   - SDWebImage (5.7.3):
     - SDWebImage/Core (= 5.7.3)
   - SDWebImage/Core (5.7.3)
+  - TwicketSegmentedControl (0.1.2)
 
 DEPENDENCIES:
   - SDWebImage (~> 5.0)
+  - TwicketSegmentedControl
 
 SPEC REPOS:
   trunk:
     - SDWebImage
+    - TwicketSegmentedControl
 
 SPEC CHECKSUMS:
   SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
+  TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: 4c646d69c9217759128ee3fa876aa58eed8493f9
+PODFILE CHECKSUM: 9b900311dfba70bdaece946983040d25470f41e2
 
 COCOAPODS: 1.8.3
