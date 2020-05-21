@@ -11,6 +11,7 @@ import UIKit
 class FossilView: UIView {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var delegate: MuseumVCDelegate?
     
     override func awakeFromNib() {
         
@@ -26,20 +27,23 @@ extension FossilView: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return fossilModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FossilViewCell", for: indexPath) as! FossilViewCell
         
-        cell.name.text = "\(indexPath.row)"
+        cell.name.text = fossilModel[indexPath.row][0]
+        cell.imageView.sd_setImage(with: URL(string: fossilModel[indexPath.row][5]), completed: nil)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print(indexPath.row)
+        let fossilDetailedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FossilDetailedVC") as! FossilDetailedVC
+        fossilDetailedVC.fossilData = fossilModel[indexPath.row]
+        delegate?.showDetailed(fossilDetailedVC)
     }
 }

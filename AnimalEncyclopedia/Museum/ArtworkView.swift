@@ -11,6 +11,7 @@ import UIKit
 class ArtworkView: UIView {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var delegate: MuseumVCDelegate?
     
     override func awakeFromNib() {
         
@@ -26,20 +27,23 @@ extension ArtworkView: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return artworkModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArtworkViewCell", for: indexPath) as! ArtworkViewCell
         
-        cell.name.text = "\(indexPath.row)"
+        cell.name.text = artworkModel[indexPath.row][0]
+        cell.imageView.sd_setImage(with: URL(string: artworkModel[indexPath.row][4]), completed: nil)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print(indexPath.row)
+        let artworkDetailedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ArtworkDetailedVC") as! ArtworkDetailedVC
+        artworkDetailedVC.artworkData = artworkModel[indexPath.row]
+        delegate?.showDetailed(artworkDetailedVC)
     }
 }

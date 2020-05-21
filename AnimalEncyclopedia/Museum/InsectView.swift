@@ -11,6 +11,7 @@ import UIKit
 class InsectView: UIView {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var delegate: MuseumVCDelegate?
     
     override func awakeFromNib() {
         
@@ -27,20 +28,23 @@ extension InsectView: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return insectModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InsectViewCell", for: indexPath) as! InsectViewCell
         
-        cell.name.text = "\(indexPath.row)"
+        cell.name.text = insectModel[indexPath.row][0]
+        cell.imageView.sd_setImage(with: URL(string: insectModel[indexPath.row][6]), completed: nil)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print(indexPath.row)
+        let insectDetailedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InsectDetailedVC") as! InsectDetailedVC
+        insectDetailedVC.insectData = insectModel[indexPath.row]
+        delegate?.showDetailed(insectDetailedVC)
     }
 }

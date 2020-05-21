@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Segmentio
+import TwicketSegmentedControl
 
 protocol MuseumVCDelegate {
     func showDetailed(_ vc: UIViewController)
@@ -16,36 +16,26 @@ protocol MuseumVCDelegate {
 class MuseumVC: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var segmentView: Segmentio!
     var isClickedSegmented = false
     var isScroll = false
     var nowPage = 0
+    @IBOutlet weak var segmentView: TwicketSegmentedControl!
     @IBOutlet weak var fishView: FishView!
+    @IBOutlet weak var insectView: InsectView!
+    @IBOutlet weak var fossilView: FossilView!
+    @IBOutlet weak var artworkView: ArtworkView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        segmentView.setSegmentItems(["魚", "昆蟲", "化石", "藝術品"])
+        segmentView.backgroundColor = .clear
+        segmentView.delegate = self
+        
         fishView.delegate = self
-        
-        segmentView.setup(content: [
-            SegmentioItem(title: "魚", image: UIImage(named: "fish")),
-            SegmentioItem(title: "昆蟲", image: UIImage(named: "butterfly")),
-            SegmentioItem(title: "化石", image: UIImage(named: "fossil")),
-            SegmentioItem(title: "藝術品", image: UIImage(named: "painting"))
-        ], style: .imageOverLabel,
-           options: SegmentioOptions(backgroundColor: .white, segmentPosition: .fixed(maxVisibleItems: 3), scrollEnabled: true, indicatorOptions: SegmentioIndicatorOptions(type: .bottom, ratio: 1, height: 5, color: .systemBlue), horizontalSeparatorOptions:SegmentioHorizontalSeparatorOptions(type: .top, height: 1, color: UIColor(red: 245, green: 245, blue: 245, alpha: 1)), verticalSeparatorOptions:SegmentioVerticalSeparatorOptions(ratio: 1, color: UIColor(red: 245, green: 245, blue: 245, alpha: 1)), imageContentMode: .center, labelTextAlignment: .center, labelTextNumberOfLines: 1, segmentStates: SegmentioStates(defaultState: SegmentioState(backgroundColor: .clear, titleFont: UIFont(name: "Avenir-Book", size: 12)!, titleTextColor: .black), selectedState: SegmentioState(backgroundColor: .clear, titleFont: UIFont(name: "Avenir-Book", size: 12)!, titleTextColor: .black), highlightedState: SegmentioState(backgroundColor: .systemGray, titleFont: UIFont(name: "Avenir-Book", size: 12)!, titleTextColor: .black)), animationDuration: 0.3))
-        
-        segmentView.selectedSegmentioIndex = 0
-        
-        segmentView.valueDidChange = { [weak self] _, segmentIndex in
-            
-            if self?.isScroll ?? false {
-                return
-            }
-            
-            self?.scrollView.setContentOffset(CGPoint(x: (self?.view.frame.width ?? 0)*CGFloat(segmentIndex), y: 0), animated: true)
-            self?.isClickedSegmented = true
-        }
+        insectView.delegate = self
+        fossilView.delegate = self
+        artworkView.delegate = self
         
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "搜尋..."
@@ -120,7 +110,7 @@ extension MuseumVC: UIScrollViewDelegate {
             
             if nowPage != page {
                 
-                segmentView.selectedSegmentioIndex = page
+                segmentView.move(to: page) 
                 nowPage = page
             }
         }
@@ -131,10 +121,23 @@ extension MuseumVC: UIScrollViewDelegate {
         let pageWidth: CGFloat = view.frame.width
         let page: Int = Int(scrollView.contentOffset.x / pageWidth)
         
-        if segmentView.selectedSegmentioIndex != page {
-            segmentView.selectedSegmentioIndex = page
+        if segmentView.selectedSegmentIndex != page {
+            segmentView.move(to: page)
         }
         isClickedSegmented = false
         isScroll = false
+    }
+}
+
+extension MuseumVC: TwicketSegmentedControlDelegate {
+    
+    func didSelect(_ segmentIndex: Int) {
+        
+        if isScroll {
+            return
+        }
+
+        scrollView.setContentOffset(CGPoint(x: (view.frame.width)*CGFloat(segmentIndex), y: 0), animated: true)
+        isClickedSegmented = true
     }
 }
