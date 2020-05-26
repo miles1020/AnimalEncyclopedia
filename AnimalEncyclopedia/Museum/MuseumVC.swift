@@ -56,42 +56,88 @@ extension MuseumVC: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-//        if searchText == "" {
-//            if isFilter {
-//                animalAry = resultList
-//            } else {
-//                animalAry = animalModel
-//            }
-//            collectionView.reloadData()
-//            isSearch = false
-//            return
-//        }
-//
-//        isSearch = true
-//
-//        var animalList: Array<Array<String>> = []
-//
-//        for item in animalAry {
-//
-//            if item[0].contains(searchText) {
-//
-//                animalList.append(item)
-//            }
-//        }
-//
-//        animalAry = animalList
-//        collectionView.reloadData()
+        var resultList: Array<Array<String>> = []
+        
+        if searchText == "" {
+            
+            switch nowPage {
+            case 0:
+                fishView.fishAry = fishModel
+                fishView.collectionView.reloadData()
+            case 1:
+                insectView.insectAry = insectModel
+                insectView.collectionView.reloadData()
+            case 2:
+                fossilView.fossilAry = fossilModel
+                fossilView.collectionView.reloadData()
+            case 3:
+                artworkView.artworkAry = artworkModel
+                artworkView.collectionView.reloadData()
+            default:
+                resultList = []
+            }
+            
+            return
+        } 
+
+        var data: Array<Array<String>> = []
+        switch nowPage {
+        case 0:
+            data = fishModel
+        case 1:
+            data = insectModel
+        case 2:
+            data = fossilModel
+        case 3:
+            data = artworkModel
+        default:
+            resultList = []
+        }
+        
+        for item in data {
+
+            if item[0].contains(searchText) {
+
+                resultList.append(item)
+            }
+        }
+        
+        switch nowPage {
+        case 0:
+            fishView.fishAry = resultList
+            fishView.collectionView.reloadData()
+        case 1:
+            insectView.insectAry = resultList
+            insectView.collectionView.reloadData()
+        case 2:
+            fossilView.fossilAry = resultList
+            fossilView.collectionView.reloadData()
+        case 3:
+            artworkView.artworkAry = resultList
+            artworkView.collectionView.reloadData()
+        default:
+            resultList = []
+        }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
-//        if isFilter {
-//            animalAry = resultList
-//        } else {
-//            animalAry = animalModel
-//        }
-//        collectionView.reloadData()
-//        isSearch = false
+        switch nowPage {
+        case 0:
+            fishView.fishAry = fishModel
+            fishView.collectionView.reloadData()
+        case 1:
+            insectView.insectAry = insectModel
+            insectView.collectionView.reloadData()
+        case 2:
+            fossilView.fossilAry = fossilModel
+            fossilView.collectionView.reloadData()
+        case 3:
+            artworkView.artworkAry = artworkModel
+            artworkView.collectionView.reloadData()
+        default:
+            break
+        }
     }
 }
 
@@ -136,7 +182,8 @@ extension MuseumVC: TwicketSegmentedControlDelegate {
         if isScroll {
             return
         }
-
+        
+        nowPage = segmentIndex
         scrollView.setContentOffset(CGPoint(x: (view.frame.width)*CGFloat(segmentIndex), y: 0), animated: true)
         isClickedSegmented = true
     }

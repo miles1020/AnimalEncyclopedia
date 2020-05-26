@@ -12,6 +12,7 @@ class FossilView: UIView {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var delegate: MuseumVCDelegate?
+    var fossilAry: Array<Array<String>> = []
     
     override func awakeFromNib() {
         
@@ -20,6 +21,8 @@ class FossilView: UIView {
         layout.itemSize = CGSize(width: UIScreen.main.bounds.width/3-20, height: (UIScreen.main.bounds.width/3-20)*1.5)
         layout.scrollDirection = .vertical
         collectionView.collectionViewLayout = layout
+        
+        fossilAry = fossilModel
     }
 }
 
@@ -27,15 +30,15 @@ extension FossilView: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return fossilModel.count
+        return fossilAry.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FossilViewCell", for: indexPath) as! FossilViewCell
         
-        cell.name.text = fossilModel[indexPath.row][0]
-        cell.imageView.sd_setImage(with: URL(string: fossilModel[indexPath.row][5]), completed: nil)
+        cell.name.text = fossilAry[indexPath.row][0]
+        cell.imageView.sd_setImage(with: URL(string: fossilAry[indexPath.row][5]), completed: nil)
         
         return cell
     }
@@ -43,7 +46,7 @@ extension FossilView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let fossilDetailedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FossilDetailedVC") as! FossilDetailedVC
-        fossilDetailedVC.fossilData = fossilModel[indexPath.row]
+        fossilDetailedVC.fossilData = fossilAry[indexPath.row]
         delegate?.showDetailed(fossilDetailedVC)
     }
 }
