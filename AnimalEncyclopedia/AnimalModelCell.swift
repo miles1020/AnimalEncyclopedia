@@ -32,5 +32,14 @@ class AnimalModelCell: UICollectionViewCell {
         layer.shadowOpacity = 0.7
         layer.shadowRadius = 5
         layer.shadowColor = UIColor(red: 44.0/255.0, green: 62.0/255.0, blue: 80.0/255.0, alpha: 1.0).cgColor
+        
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+
+        // Code below is needed to make the self-sizing cell work when building for iOS 12 from Xcode 10.0:
+        let leftConstraint = contentView.leftAnchor.constraint(equalTo: leftAnchor)
+        let rightConstraint = contentView.rightAnchor.constraint(equalTo: rightAnchor)
+        let topConstraint = contentView.topAnchor.constraint(equalTo: topAnchor)
+        let bottomConstraint = contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        NSLayoutConstraint.activate([leftConstraint, rightConstraint, topConstraint, bottomConstraint])
     }
 }

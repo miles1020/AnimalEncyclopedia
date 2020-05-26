@@ -45,6 +45,10 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
+    override func viewWillLayoutSubviews() {
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
     @objc func tap(tap: UITapGestureRecognizer) {
         
         view.endEditing(true)
