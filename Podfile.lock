@@ -2,21 +2,25 @@ PODS:
   - SDWebImage (5.7.3):
     - SDWebImage/Core (= 5.7.3)
   - SDWebImage/Core (5.7.3)
+  - SwiftCharts (0.6.5)
   - TwicketSegmentedControl (0.1.2)
 
 DEPENDENCIES:
   - SDWebImage (~> 5.0)
+  - SwiftCharts (~> 0.6.5)
   - TwicketSegmentedControl
 
 SPEC REPOS:
   trunk:
     - SDWebImage
+    - SwiftCharts
     - TwicketSegmentedControl
 
 SPEC CHECKSUMS:
   SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
+  SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
   TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: 9b900311dfba70bdaece946983040d25470f41e2
+PODFILE CHECKSUM: d72a382161a0c4eb440e57b00e90c6b988b85c3a
 
 COCOAPODS: 1.8.3

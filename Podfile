@@ -9,5 +9,6 @@ target 'AnimalEncyclopedia' do
 
 pod 'SDWebImage', '~> 5.0'
 pod 'TwicketSegmentedControl'
+pod 'SwiftCharts', '~> 0.6.5'
 
 end

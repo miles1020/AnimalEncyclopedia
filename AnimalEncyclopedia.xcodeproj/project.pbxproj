@@ -27,6 +27,7 @@
 		DB86C4E62475327A00BA057E /* FossilDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB86C4E52475327A00BA057E /* FossilDetailedVC.swift */; };
 		DB86C4E824753F8600BA057E /* ArtworkDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB86C4E724753F8600BA057E /* ArtworkDetailedVC.swift */; };
 		DB86C4EA2475432300BA057E /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB86C4E92475432300BA057E /* PictureView.swift */; };
+		DB86C4EE2476371800BA057E /* KohlrabiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB86C4ED2476371800BA057E /* KohlrabiVC.swift */; };
 		DB9DEF422473CAC7006ABD91 /* FishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DEF412473CAC7006ABD91 /* FishView.swift */; };
 		DB9DEF442473CAEE006ABD91 /* InsectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DEF432473CAEE006ABD91 /* InsectView.swift */; };
 		DB9DEF462473CB07006ABD91 /* FossilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DEF452473CB07006ABD91 /* FossilView.swift */; };
@@ -66,6 +67,7 @@
 		DB86C4E52475327A00BA057E /* FossilDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FossilDetailedVC.swift; sourceTree = "<group>"; };
 		DB86C4E724753F8600BA057E /* ArtworkDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDetailedVC.swift; sourceTree = "<group>"; };
 		DB86C4E92475432300BA057E /* PictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		DB86C4ED2476371800BA057E /* KohlrabiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KohlrabiVC.swift; sourceTree = "<group>"; };
 		DB9DEF412473CAC7006ABD91 /* FishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishView.swift; sourceTree = "<group>"; };
 		DB9DEF432473CAEE006ABD91 /* InsectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsectView.swift; sourceTree = "<group>"; };
 		DB9DEF452473CB07006ABD91 /* FossilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FossilView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				DB5224DC2462C3DD00B396B7 /* Filter */,
 				DB9DEF562473F164006ABD91 /* DIY */,
 				DB9DEF402473CAA3006ABD91 /* Museum */,
+				DB86C4EC247636FF00BA057E /* Kohlrabi */,
 				DB9DEF522473DC5F006ABD91 /* Extensions */,
 				DB9DEF532473DC71006ABD91 /* Flie */,
 				DB18B7D42462956400138FAE /* Main.storyboard */,
@@ -151,6 +154,14 @@
 				DB18B7E42462995D00138FAE /* FilterView.xib */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		DB86C4EC247636FF00BA057E /* Kohlrabi */ = {
+			isa = PBXGroup;
+			children = (
+				DB86C4ED2476371800BA057E /* KohlrabiVC.swift */,
+			);
+			path = Kohlrabi;
 			sourceTree = "<group>";
 		};
 		DB9DEF402473CAA3006ABD91 /* Museum */ = {
@@ -335,6 +346,7 @@
 				DB9DEF4F2473D06D006ABD91 /* FossilViewCell.swift in Sources */,
 				DB18B7E72462997900138FAE /* FilterView.swift in Sources */,
 				DB845C59246407720060C02E /* AnimalFile.swift in Sources */,
+				DB86C4EE2476371800BA057E /* KohlrabiVC.swift in Sources */,
 				DB18B7D32462956400138FAE /* ViewController.swift in Sources */,
 				DB86C4E424752B9200BA057E /* InsectDetailedVC.swift in Sources */,
 				DB9DEF582473F1CE006ABD91 /* FishDetailedVC.swift in Sources */,
